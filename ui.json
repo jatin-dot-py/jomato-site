@@ -37,8 +37,9 @@
     "features": {
         "food_rescue": {
             "name": "Food Rescue",
+            "login_required": true,
             "description": "Food Rescue is a feature that allows you to rescue food from restaurants and donate it to the needy.",
-            "icon_link": "https://jomato.pages.dev/assets/food_rescue.svg",
+            "icon_link": "assets/food_rescue.svg",
             "parent": "zomato",
             "disabled": false,
             "healthy": true,
@@ -49,8 +50,9 @@
         },
         "order_insights": {
             "name": "Order Insights",
+            "login_required": true,
             "description": "Order Insights is a feature that allows you to see insights about your orders.",
-            "icon_link": "https://jomato.pages.dev/assets/order_insights.svg",
+            "icon_link": "assets/order_insights.svg",
             "parent": "zomato",
             "disabled": false,
             "healthy": true,
@@ -78,7 +80,7 @@
                     "jatin-dot-py/jomato"
                 ],
                 "onclick_action_link": "https://github.com/jatin-dot-py/jomato",
-                "icon_link": "https://jomato.pages.dev/assets/github.svg",
+                "icon_link": "assets/github.svg",
                 "message_duration": 5000
             }
         },
