@@ -25,41 +25,43 @@
     },
     "entity_status": {
         "zomato": {
-            "is_healthy": true,
-            "issue_message": "The entity is healthy and working as expected.",
+            "display_name" : "Zomato",
+            "healthy": true,
+            "message": "The entity is healthy and working as expected.",
             "attribution": {
                 "link": "https://zomato.com",
                 "message": "Not affiliated with Zomato. Use at your own risk.",
-                "google_play_link": "https://play.google.com/store/apps/details?id=com.app.zomato"
-            }
+                "app_link": "https://play.google.com/store/apps/details?id=com.app.zomato"
+            },
+            "brand_color": "#CB202D"
         }
     },
     "features": {
-        "food_rescue": {
+        "zomato_food_rescue": {
             "name": "Food Rescue",
             "login_required": true,
             "description": "Food Rescue is a feature that allows you to rescue food from restaurants and donate it to the needy.",
             "icon_link": "assets/food_rescue.svg",
-            "parent": "zomato",
+            "parent_entity": "zomato",
             "disabled": false,
             "healthy": true,
             "depreciated": false,
             "coming_soon": false,
-            "is_new": false,
-            "issue_message": "The feature is healthy and working as expected."
+            "new": false,
+            "message": "The feature is healthy and working as expected."
         },
-        "order_insights": {
-            "name": "Order Insights",
+        "zomato_order_insights": {
+            "name": "Zomato spending insights",
             "login_required": true,
             "description": "Order Insights is a feature that allows you to see insights about your orders.",
             "icon_link": "assets/order_insights.svg",
-            "parent": "zomato",
+            "parent_entity": "zomato",
             "disabled": false,
             "healthy": true,
             "depreciated": false,
             "coming_soon": false,
-            "is_new": false,
-            "issue_message": "The feature is healthy and working as expected."
+            "new": false,
+            "message": "The feature is healthy and working as expected."
         }
     },
     "widgets": [
