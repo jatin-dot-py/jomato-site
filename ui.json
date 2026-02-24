@@ -91,12 +91,6 @@
             }
         },
         {
-            "type": "jomato_issue",
-            "payload": {
-                "base_link_without_trailing_slash": "https://github.com/jatin-dot-py/jomato/issues"
-            }
-        },
-        {
             "type": "jomato_privacy_faqs",
             "payload": {
                 "content": [
@@ -126,14 +120,6 @@
                     }
                 ]
             }
-        },
-        {
-            "type": "food_rescue_metrics",
-            "payload": {}
-        },
-        {
-            "type": "jomato_share_card",
-            "payload": {}
         }
     ],
     "metadata": {
@@ -143,6 +129,8 @@
         "website": "https://jomato.pages.dev",
         "lifetime_users": 100,
         "total_active_last_30_days": 100,
-        "total_active_last_7_days": null
+        "total_active_last_7_days": null,
+        "issues_url": "https://github.com/jatin-dot-py/jomato-mobile/issues/new?title=%5BIssue%5D%20Short%20Description%20here%20&body=Describe%20the%20issue%20you%20are%20facing.",
+        "request_feature_url": "https://github.com/jatin-dot-py/jomato-mobile/issues/new?title=%5BFeature%20Request%5D%20Short%20description%20here%20&body=Describe%20the%20feature."
     }
 }
