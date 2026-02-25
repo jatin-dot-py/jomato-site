@@ -23,45 +23,39 @@
             "strict": false
         }
     },
-    "entity_status": {
+    "entities": {
         "zomato": {
-            "display_name" : "Zomato",
+            "name" : "Zomato",
             "healthy": true,
             "message": "The entity is healthy and working as expected.",
-            "attribution": {
-                "link": "https://zomato.com",
-                "message": "Not affiliated with Zomato. Use at your own risk.",
-                "app_link": "https://play.google.com/store/apps/details?id=com.app.zomato"
-            },
-            "brand_color": "#CB202D"
-        }
-    },
-    "features": {
-        "zomato_food_rescue": {
-            "name": "Food Rescue",
-            "login_required": true,
-            "description": "Food Rescue is a feature that allows you to rescue food from restaurants and donate it to the needy.",
-            "icon_link": "assets/food_rescue.svg",
-            "parent_entity": "zomato",
-            "disabled": false,
-            "healthy": true,
-            "depreciated": false,
-            "coming_soon": false,
-            "new": false,
-            "message": "The feature is healthy and working as expected."
-        },
-        "zomato_order_insights": {
-            "name": "Zomato spending insights",
-            "login_required": true,
-            "description": "Order Insights is a feature that allows you to see insights about your orders.",
-            "icon_link": "assets/order_insights.svg",
-            "parent_entity": "zomato",
-            "disabled": false,
-            "healthy": true,
-            "depreciated": false,
-            "coming_soon": false,
-            "new": false,
-            "message": "The feature is healthy and working as expected."
+            "website_link": "https://zomato.com",
+            "app_link": "https://play.google.com/store/apps/details?id=com.app.zomato",
+            "color": "#CB202D",
+            "enabled": true,
+            "features": {
+                "zomato_food_rescue": {
+                    "name": "Food Rescue",
+                    "login": true,
+                    "description": "Food Rescue is a feature that allows you to rescue food from restaurants and donate it to the needy.",
+                    "icon": "assets/food_rescue.svg",
+                    "disabled": false,
+                    "healthy": true,
+                    "coming_soon": false,
+                    "new": false,
+                    "message": "The feature is healthy and working as expected."
+                },
+                "zomato_order_insights": {
+                    "name": "Zomato spending insights",
+                    "login_required": true,
+                    "description": "Order Insights is a feature that allows you to see insights about your orders.",
+                    "icon_link": "assets/order_insights.svg",
+                    "disabled": false,
+                    "healthy": true,
+                    "coming_soon": false,
+                    "new": false,
+                    "message": "The feature is healthy and working as expected."
+                }
+            }
         }
     },
     "widgets": [
