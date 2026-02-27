@@ -26,12 +26,23 @@
     "entities": {
         "zomato": {
             "name" : "Zomato",
+            "max_accounts": 2,
             "healthy": true,
             "message": "The entity is healthy and working as expected.",
             "website_link": "https://zomato.com",
             "app_link": "https://play.google.com/store/apps/details?id=com.app.zomato",
             "color": "#CB202D",
             "enabled": true,
+            "faqs": [{
+                "question": "What is Zomato?",
+                "answer": "Zomato is a food delivery platform that allows you to order food from restaurants and get it delivered to your door."
+            }, {
+                "question": "What is Zomato?",
+                "answer": "Zomato is a food delivery platform that allows you to order food from restaurants and get it delivered to your door."
+            }, {
+                "question": "What is Zomato?",
+                "answer": "Zomato is a food delivery platform that allows you to order food from restaurants and get it delivered to your door."
+            }],
             "features": {
                 "zomato_food_rescue": {
                     "name": "Food Rescue",
@@ -42,7 +53,19 @@
                     "healthy": true,
                     "coming_soon": false,
                     "new": false,
-                    "message": "The feature is healthy and working as expected."
+                    "message": "The feature is healthy and working as expected.",
+                    "faqs": [
+                        {
+                            "question": "What is Food Rescue?",
+                            "answer": "Food Rescue is a feature that allows you to rescue food from restaurants and donate it to the needy."
+                        }, {
+                            "question": "What is Food Rescue?",
+                            "answer": "Food Rescue is a feature that allows you to rescue food from restaurants and donate it to the needy."
+                        }, {
+                            "question": "What is Food Rescue?",
+                            "answer": "Food Rescue is a feature that allows you to rescue food from restaurants and donate it to the needy."
+                        }
+                    ]
                 },
                 "zomato_order_insights": {
                     "name": "Zomato spending insights",
@@ -53,7 +76,8 @@
                     "healthy": true,
                     "coming_soon": false,
                     "new": false,
-                    "message": "The feature is healthy and working as expected."
+                    "message": "The feature is healthy and working as expected.",
+                    "faqs": []
                 }
             }
         }
