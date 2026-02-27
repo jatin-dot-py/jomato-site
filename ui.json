@@ -1,156 +1,257 @@
 {
     "integrity": {
-        "versions": [
-            {
-                "digest": "sha256:9c2716ccd03e0490b271cce9e2b3fb1cc19be2df240d029d0863a05f3df6b10b",
-                "version": "v1.0.5"
-            },
-            {
-                "digest": "sha256:3c8e1f6fcff9f8c7e61fe223fa2c1451b2e4a5f3a72796b48a50350ec1af97a3",
-                "version": "v1.0.3"
-            },
-            {
-                "digest": "sha256:e7f4be2f05f62feec63a1084c95fc9fd1374b404dd3f1d6f9a3f3b2891357ef3",
-                "version": "v1.0.2"
-            },
-            {
-                "digest": "sha256:1869cd90234fd4a03b4522d26ad8a35d25be6282f94b74ca8c7bca9e4196e3e9",
-                "version": "v1.0.1"
-            }
-        ],
-        "on_integrity_mismatch": {
-            "message": "This app build couldn't be verified. It may have been modified. Uninstall and reinstall only from our official release page 'jomato.pages.dev' for your safety.",
-            "strict": false
+      "versions": [
+        {
+          "digest": "sha256:9c2716ccd03e0490b271cce9e2b3fb1cc19be2df240d029d0863a05f3df6b10b",
+          "version": "v1.0.5"
+        },
+        {
+          "digest": "sha256:3c8e1f6fcff9f8c7e61fe223fa2c1451b2e4a5f3a72796b48a50350ec1af97a3",
+          "version": "v1.0.3"
+        },
+        {
+          "digest": "sha256:e7f4be2f05f62feec63a1084c95fc9fd1374b404dd3f1d6f9a3f3b2891357ef3",
+          "version": "v1.0.2"
+        },
+        {
+          "digest": "sha256:1869cd90234fd4a03b4522d26ad8a35d25be6282f94b74ca8c7bca9e4196e3e9",
+          "version": "v1.0.1"
         }
+      ],
+      "on_integrity_mismatch": {
+        "message": "This app build couldn't be verified. It may have been modified. Uninstall and reinstall only from our official release page 'jomato.pages.dev' for your safety.",
+        "strict": false
+      }
     },
     "entities": {
-        "zomato": {
-            "name" : "Zomato",
-            "max_accounts": 2,
+      "zomato": {
+        "name": "Zomato",
+        "max_accounts": 2,
+        "healthy": true,
+        "message": "The entity is healthy and working as expected.",
+        "website_link": "https://zomato.com",
+        "app_link": "https://play.google.com/store/apps/details?id=com.app.zomato",
+        "color": "#CB202D",
+        "enabled": true,
+        "faqs": [
+          {
+            "question": "What is Zomato?",
+            "answer": "Zomato is a food delivery platform that allows you to order food from restaurants and get it delivered to your door."
+          },
+          {
+            "question": "Is Zomato integrated securely?",
+            "answer": "Jomato stores your Zomato session only on your device to keep you logged in; we do not store your password on our servers."
+          }
+        ],
+        "features": {
+          "zomato_food_rescue": {
+            "name": "Food Rescue (live + new)",
+            "login": true,
+            "description": "Instant alerts on cancelled orders near you.",
+            "icon": "assets/food_rescue.svg",
+            "disabled": false,
             "healthy": true,
-            "message": "The entity is healthy and working as expected.",
-            "website_link": "https://zomato.com",
-            "app_link": "https://play.google.com/store/apps/details?id=com.app.zomato",
-            "color": "#CB202D",
-            "enabled": true,
-            "faqs": [{
-                "question": "What is Zomato?",
-                "answer": "Zomato is a food delivery platform that allows you to order food from restaurants and get it delivered to your door."
-            }, {
-                "question": "What is Zomato?",
-                "answer": "Zomato is a food delivery platform that allows you to order food from restaurants and get it delivered to your door."
-            }, {
-                "question": "What is Zomato?",
-                "answer": "Zomato is a food delivery platform that allows you to order food from restaurants and get it delivered to your door."
-            }],
-            "features": {
-                "zomato_food_rescue": {
-                    "name": "Food Rescue",
-                    "login": true,
-                    "description": "Food Rescue is a feature that allows you to rescue food from restaurants and donate it to the needy.",
-                    "icon": "assets/food_rescue.svg",
-                    "disabled": false,
-                    "healthy": true,
-                    "coming_soon": false,
-                    "new": false,
-                    "message": "The feature is healthy and working as expected.",
-                    "faqs": [
-                        {
-                            "question": "What is Food Rescue?",
-                            "answer": "Food Rescue is a feature that allows you to rescue food from restaurants and donate it to the needy."
-                        }, {
-                            "question": "What is Food Rescue?",
-                            "answer": "Food Rescue is a feature that allows you to rescue food from restaurants and donate it to the needy."
-                        }, {
-                            "question": "What is Food Rescue?",
-                            "answer": "Food Rescue is a feature that allows you to rescue food from restaurants and donate it to the needy."
-                        }
-                    ]
-                },
-                "zomato_order_insights": {
-                    "name": "Zomato spending insights",
-                    "login_required": true,
-                    "description": "Order Insights is a feature that allows you to see insights about your orders.",
-                    "icon_link": "assets/order_insights.svg",
-                    "disabled": false,
-                    "healthy": true,
-                    "coming_soon": false,
-                    "new": false,
-                    "message": "The feature is healthy and working as expected.",
-                    "faqs": []
-                }
-            }
+            "coming_soon": false,
+            "new": true,
+            "message": "Food Rescue is live and healthy.",
+            "faqs": [
+              {
+                "question": "What is Food Rescue?",
+                "answer": "Food Rescue lets you rescue cancelled orders and donate them to people in need."
+              },
+              {
+                "question": "Do I need to be logged in?",
+                "answer": "Yes. We use your Zomato account to fetch relevant orders in your area."
+              }
+            ]
+          },
+          "zomato_food_rescue_coming_soon": {
+            "name": "Food Rescue (coming soon)",
+            "login": true,
+            "description": "Coming soon version to test the SOON badge.",
+            "icon": "assets/food_rescue.svg",
+            "disabled": false,
+            "healthy": true,
+            "coming_soon": true,
+            "new": false,
+            "message": "Feature stub to exercise coming_soon=true.",
+            "faqs": [
+              {
+                "question": "Is this live?",
+                "answer": "No, this variant is only to test the UI for coming soon features."
+              }
+            ]
+          },
+          "zomato_food_rescue_unhealthy": {
+            "name": "Food Rescue (unhealthy)",
+            "login": true,
+            "description": "Same feature but marked unhealthy for testing.",
+            "icon": "assets/food_rescue.svg",
+            "disabled": false,
+            "healthy": false,
+            "coming_soon": false,
+            "new": false,
+            "message": "Temporarily unavailable due to upstream issues.",
+            "faqs": [
+              {
+                "question": "Why is Food Rescue unhealthy?",
+                "answer": "This is a test configuration to see how unhealthy features behave in the UI."
+              }
+            ]
+          },
+          "zomato_food_rescue_disabled": {
+            "name": "Food Rescue (disabled)",
+            "login": true,
+            "description": "This should NOT show as a card (disabled=true).",
+            "icon": "assets/food_rescue.svg",
+            "disabled": true,
+            "healthy": true,
+            "coming_soon": false,
+            "new": false,
+            "message": "Disabled feature should be filtered out.",
+            "faqs": []
+          },
+          "zomato_order_insights": {
+            "name": "Zomato spending insights (login_required)",
+            "login_required": true,
+            "description": "See your total spend, order counts, and patterns.",
+            "icon_link": "assets/order_insights.svg",
+            "disabled": false,
+            "healthy": true,
+            "coming_soon": false,
+            "new": false,
+            "message": "Primary order insights feature.",
+            "faqs": [
+              {
+                "question": "What does Order Insights show?",
+                "answer": "High level stats like total spend, orders per month, and top cuisines."
+              }
+            ]
+          },
+          "zomato_order_insights_soon": {
+            "name": "Zomato insights (coming soon)",
+            "login_required": true,
+            "description": "Variant to test coming soon with login_required.",
+            "icon_link": "assets/order_insights.svg",
+            "disabled": false,
+            "healthy": true,
+            "coming_soon": true,
+            "new": true,
+            "message": "Coming soon + new badges together.",
+            "faqs": []
+          },
+          "zomato_generic_no_icon": {
+            "name": "Generic feature (no icon)",
+            "login": false,
+            "description": "Tests fallback icon and behavior when icon/icon_link is missing.",
+            "disabled": false,
+            "healthy": true,
+            "coming_soon": false,
+            "new": false,
+            "message": "Should show with the default info icon.",
+            "faqs": [
+              {
+                "question": "Why is there no icon?",
+                "answer": "This feature intentionally omits the icon to exercise UI defaults."
+              }
+            ]
+          },
+          "zomato_generic_login_false": {
+            "name": "Public feature (no login required)",
+            "login": false,
+            "description": "Tests a feature that does not require login.",
+            "icon": "assets/food_rescue.svg",
+            "disabled": false,
+            "healthy": true,
+            "coming_soon": false,
+            "new": false,
+            "message": "Public feature without login.",
+            "faqs": []
+          },
+          "zomato_generic_login_required_only": {
+            "name": "Login required only",
+            "login_required": true,
+            "description": "Tests using only login_required without login.",
+            "icon_link": "assets/order_insights.svg",
+            "disabled": false,
+            "healthy": true,
+            "coming_soon": false,
+            "new": false,
+            "message": "Requires login via login_required=true.",
+            "faqs": []
+          }
         }
+      }
     },
     "widgets": [
-        {
-            "type": "jomato_update",
-            "payload": {
-                "version": "v1.0.5",
-                "browser_download_url": "https://github.com/jatin-dot-py/jomato-mobile/releases/download/v1.0.5/Jomato-v1.0.5.apk",
-                "digest": "sha256:9c2716ccd03e0490b271cce9e2b3fb1cc19be2df240d029d0863a05f3df6b10b",
-                "changelog": ""
-            }
-        },
-        {
-            "type": "jomato_attribution",
-            "payload": {
-                "messages": [
-                    {
-                        "text": "Star us on github",
-                        "onclick_action_link": "https://github.com/jatin-dot-py/jomato",
-                        "icon_link": "assets/github.svg"
-                    },
-                    {
-                        "text": "jatin-dot-py/jomato",
-                        "onclick_action_link": "https://github.com/jatin-dot-py/jomato",
-                        "icon_link": "assets/github.svg"
-                    }
-                ],
-                "message_duration": 5000
-            }
-        },
-        {
-            "type": "jomato_privacy_faqs",
-            "payload": {
-                "content": [
-                    {
-                        "question": "What data is collected?",
-                        "answer": "We only collect the minimum needed to run the app. When you open the app, we record the equivalent of: \"Someone using Jomato version X opened the app today.\" That's an anonymous count (we don't know who you are). If you log in with Zomato, we store your Zomato session on your device only so you stay logged in; we don't collect your name, email, or phone beyond what Zomato needs for login."
-                    },
-                    {
-                        "question": "Why do you collect that data?",
-                        "answer": "So we know how many people use Jomato and which app versions are in use. That helps us decide when to fix bugs and when to suggest updates. It's like knowing \"how many people opened the app today\" without knowing who they are."
-                    },
-                    {
-                        "question": "Is Jomato affiliated with Zomato?",
-                        "answer": "No. Jomato is not affiliated with Zomato. Use at your own risk."
-                    },
-                    {
-                        "question": "Do you use my location?",
-                        "answer": "We don't use your phone's GPS. Food Rescue uses the area or city you've set in your Zomato account (your saved addresses). We don't track or store your precise location."
-                    },
-                    {
-                        "question": "Where does my data go?",
-                        "answer": "The anonymous \"app opened\" info is used only to understand usage (e.g. how many people use which version). When you use features that need Zomato (like Food Rescue), those requests go to Zomato. Your Zomato login stays on your device; we don't store your password anywhere."
-                    },
-                    {
-                        "question": "Why do you need notification, battery, and install permissions?",
-                        "answer": "Notifications: So we can notify you for Food Rescue. Battery: So the rescue feature can run in the background. Install: So you can install updates from the in-app update prompt if you choose to."
-                    }
-                ]
-            }
+      {
+        "type": "jomato_update",
+        "payload": {
+          "version": "v1.0.5",
+          "browser_download_url": "https://github.com/jatin-dot-py/jomato-mobile/releases/download/v1.0.5/Jomato-v1.0.5.apk",
+          "digest": "sha256:9c2716ccd03e0490b271cce9e2b3fb1cc19be2df240d029d0863a05f3df6b10b",
+          "changelog": ""
         }
+      },
+      {
+        "type": "jomato_attribution",
+        "payload": {
+          "messages": [
+            {
+              "text": "Star us on GitHub",
+              "onclick_action_link": "https://github.com/jatin-dot-py/jomato",
+              "icon_link": "assets/github.svg"
+            },
+            {
+              "text": "jatin-dot-py/jomato",
+              "onclick_action_link": "https://github.com/jatin-dot-py/jomato",
+              "icon_link": "assets/github.svg"
+            }
+          ],
+          "message_duration": 5000
+        }
+      },
+      {
+        "type": "jomato_privacy_faqs",
+        "payload": {
+          "content": [
+            {
+              "question": "What data is collected?",
+              "answer": "We only collect the minimum needed to run the app. When you open the app, we record the equivalent of: \"Someone using Jomato version X opened the app today.\" That's an anonymous count (we don't know who you are). If you log in with Zomato, we store your Zomato session on your device only so you stay logged in; we don't collect your name, email, or phone beyond what Zomato needs for login."
+            },
+            {
+              "question": "Why do you collect that data?",
+              "answer": "So we know how many people use Jomato and which app versions are in use. That helps us decide when to fix bugs and when to suggest updates. It's like knowing \"how many people opened the app today\" without knowing who they are."
+            },
+            {
+              "question": "Is Jomato affiliated with Zomato?",
+              "answer": "No. Jomato is not affiliated with Zomato. Use at your own risk."
+            },
+            {
+              "question": "Do you use my location?",
+              "answer": "We don't use your phone's GPS. Food Rescue uses the area or city you've set in your Zomato account (your saved addresses). We don't track or store your precise location."
+            },
+            {
+              "question": "Where does my data go?",
+              "answer": "The anonymous \"app opened\" info is used only to understand usage (e.g. how many people use which version). When you use features that need Zomato (like Food Rescue), those requests go to Zomato. Your Zomato login stays on your device; we don't store your password anywhere."
+            },
+            {
+              "question": "Why do you need notification, battery, and install permissions?",
+              "answer": "Notifications: So we can notify you for Food Rescue. Battery: So the rescue feature can run in the background. Install: So you can install updates from the in-app update prompt if you choose to."
+            }
+          ]
+        }
+      }
     ],
     "metadata": {
-        "name": "Jomato",
-        "description": "",
-        "package_name": "com.application.jomato",
-        "website": "https://jomato.pages.dev",
-        "lifetime_users": 100,
-        "total_active_last_30_days": 100,
-        "total_active_last_7_days": null,
-        "issues_url": "https://github.com/jatin-dot-py/jomato-mobile/issues/new?title=%5BIssue%5D%20Short%20Description%20here%20&body=Describe%20the%20issue%20you%20are%20facing.",
-        "request_feature_url": "https://github.com/jatin-dot-py/jomato-mobile/issues/new?title=%5BFeature%20Request%5D%20Short%20description%20here%20&body=Describe%20the%20feature."
+      "name": "Jomato",
+      "description": "",
+      "package_name": "com.application.jomato",
+      "website": "https://jomato.pages.dev",
+      "lifetime_users": 100,
+      "total_active_last_30_days": 100,
+      "total_active_last_7_days": null,
+      "issues_url": "https://github.com/jatin-dot-py/jomato-mobile/issues/new?title=%5BIssue%5D%20Short%20Description%20here%20&body=Describe%20the%20issue%20you%20are%20facing.",
+      "request_feature_url": "https://github.com/jatin-dot-py/jomato-mobile/issues/new?title=%5BFeature%20Request%5D%20Short%20description%20here%20&body=Describe%20the%20feature."
     }
-}
+  }
