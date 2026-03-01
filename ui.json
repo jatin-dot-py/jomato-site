@@ -26,159 +26,182 @@
     "entities": {
       "zomato": {
         "name": "Zomato",
-        "max_accounts": 2,
+        "max_accounts": 1,
         "healthy": true,
-        "message": "The entity is healthy and working as expected.",
+        "message": "All Zomato services are running normally.",
         "website_link": "https://zomato.com",
-        "app_link": "https://play.google.com/store/apps/details?id=com.app.zomato",
+        "app_link": "https://play.google.com/store/apps/details?id=com.application.zomato",
         "color": "#CB202D",
         "enabled": true,
         "faqs": [
           {
-            "question": "What is Zomato?",
-            "answer": "Zomato is a food delivery platform that allows you to order food from restaurants and get it delivered to your door."
+            "question": "What is Zomato integration?",
+            "answer": "Jomato connects to your Zomato account to provide features like Food Rescue and Order Insights. Your credentials stay on your device."
           },
           {
-            "question": "Is Zomato integrated securely?",
-            "answer": "Jomato stores your Zomato session only on your device to keep you logged in; we do not store your password on our servers."
+            "question": "Is my Zomato account safe?",
+            "answer": "Yes. We use the same session tokens that the official Zomato app uses. Your password is never stored. You can revoke access anytime by removing your account in the app."
+          },
+          {
+            "question": "Why do I need to log in with my phone number?",
+            "answer": "Zomato uses OTP-based authentication. We send the OTP request to Zomato's servers, and you verify it. Jomato never sees your OTP — it goes directly to Zomato."
           }
         ],
         "features": {
           "zomato_food_rescue": {
-            "name": "Food Rescue (live + new)",
+            "name": "Food Rescue",
             "login": true,
-            "description": "Instant alerts on cancelled orders near you.",
+            "description": "Get instant alerts when cancelled orders become available near you.",
             "icon": "assets/food_rescue.svg",
             "disabled": false,
             "healthy": true,
             "coming_soon": false,
             "new": true,
-            "message": "Food Rescue is live and healthy.",
+            "message": "",
             "faqs": [
               {
                 "question": "What is Food Rescue?",
-                "answer": "Food Rescue lets you rescue cancelled orders and donate them to people in need."
+                "answer": "When someone cancels a food order on Zomato, it becomes available for pickup at a heavily discounted price. Food Rescue alerts you the moment one appears in your area."
               },
               {
-                "question": "Do I need to be logged in?",
-                "answer": "Yes. We use your Zomato account to fetch relevant orders in your area."
-              }
-            ]
-          },
-          "zomato_food_rescue_coming_soon": {
-            "name": "Food Rescue (coming soon)",
-            "login": true,
-            "description": "Coming soon version to test the SOON badge.",
-            "icon": "assets/food_rescue.svg",
-            "disabled": false,
-            "healthy": true,
-            "coming_soon": true,
-            "new": false,
-            "message": "Feature stub to exercise coming_soon=true.",
-            "faqs": [
+                "question": "Does it use my GPS location?",
+                "answer": "No. It uses the delivery area saved in your Zomato account (your saved addresses), not your phone's GPS."
+              },
               {
-                "question": "Is this live?",
-                "answer": "No, this variant is only to test the UI for coming soon features."
-              }
-            ]
-          },
-          "zomato_food_rescue_unhealthy": {
-            "name": "Food Rescue (unhealthy)",
-            "login": true,
-            "description": "Same feature but marked unhealthy for testing.",
-            "icon": "assets/food_rescue.svg",
-            "disabled": false,
-            "healthy": false,
-            "coming_soon": false,
-            "new": false,
-            "message": "Temporarily unavailable due to upstream issues.",
-            "faqs": [
+                "question": "Why does it need battery optimization disabled?",
+                "answer": "Food Rescue runs a background service to check for new orders. Android may kill it to save battery. Disabling battery optimization keeps it running reliably."
+              },
               {
-                "question": "Why is Food Rescue unhealthy?",
-                "answer": "This is a test configuration to see how unhealthy features behave in the UI."
+                "question": "Will it drain my battery?",
+                "answer": "Minimal impact. The service polls at intervals and sleeps in between. Most users report negligible battery usage."
               }
             ]
-          },
-          "zomato_food_rescue_disabled": {
-            "name": "Food Rescue (disabled)",
-            "login": true,
-            "description": "This should NOT show as a card (disabled=true).",
-            "icon": "assets/food_rescue.svg",
-            "disabled": true,
-            "healthy": true,
-            "coming_soon": false,
-            "new": false,
-            "message": "Disabled feature should be filtered out.",
-            "faqs": []
           },
           "zomato_order_insights": {
-            "name": "Zomato spending insights (login_required)",
+            "name": "Order Insights",
             "login_required": true,
-            "description": "See your total spend, order counts, and patterns.",
+            "description": "See your total spending, order patterns, and top cuisines.",
             "icon_link": "assets/order_insights.svg",
             "disabled": false,
             "healthy": true,
             "coming_soon": false,
             "new": false,
-            "message": "Primary order insights feature.",
+            "message": "",
             "faqs": [
               {
                 "question": "What does Order Insights show?",
-                "answer": "High level stats like total spend, orders per month, and top cuisines."
+                "answer": "A breakdown of your Zomato spending — total amount spent, number of orders, average order value, most ordered cuisines, and monthly trends."
+              },
+              {
+                "question": "How far back does the data go?",
+                "answer": "It fetches your entire order history from Zomato, going back as far as your account exists."
+              },
+              {
+                "question": "Is my order data sent to any server?",
+                "answer": "No. All processing happens on your device. Your order history is fetched from Zomato and analyzed locally."
               }
             ]
           },
-          "zomato_order_insights_soon": {
-            "name": "Zomato insights (coming soon)",
+          "zomato_live_tracking": {
+            "name": "Live Order Tracking",
             "login_required": true,
-            "description": "Variant to test coming soon with login_required.",
-            "icon_link": "assets/order_insights.svg",
+            "description": "Real-time notifications for your active Zomato deliveries.",
+            "icon_link": "assets/live_tracking.svg",
+            "disabled": false,
+            "healthy": true,
+            "coming_soon": false,
+            "new": true,
+            "message": "",
+            "faqs": [
+              {
+                "question": "What is Live Order Tracking?",
+                "answer": "It monitors your active Zomato orders and sends you interactive notification to let you know the live status of the order."
+              },
+              {
+                "question": "How is this different from the Zomato app?",
+                "answer": "It works without keeping the Zomato app open. You get lightweight notifications directly from Jomato, so you can close Zomato entirely."
+              },
+              {
+                "question": "Does it track my location?",
+                "answer": "No. It tracks the rider's status from Zomato's API, not your location."
+              }
+            ]
+          }
+        }
+      },
+      "blinkit": {
+        "name": "Blinkit",
+        "max_accounts": 1,
+        "healthy": true,
+        "message": "Blinkit support is in early development.",
+        "website_link": "https://blinkit.com",
+        "app_link": "https://play.google.com/store/apps/details?id=com.grofers.customerapp",
+        "color": "#F5C700",
+        "enabled": true,
+        "faqs": [
+          {
+            "question": "What is Blinkit integration?",
+            "answer": "Blinkit integration will let you track your grocery deliveries in real-time through Jomato, without needing the Blinkit app open."
+          },
+          {
+            "question": "When will Blinkit features be available?",
+            "answer": "Blinkit support is experimental. Live Notification is coming soon. Other features will follow based on demand."
+          }
+        ],
+        "features": {
+          "blinkit_live_tracking": {
+            "name": "Live Delivery Tracking",
+            "login_required": true,
+            "description": "Real-time notifications for your Blinkit grocery deliveries.",
             "disabled": false,
             "healthy": true,
             "coming_soon": true,
-            "new": true,
-            "message": "Coming soon + new badges together.",
-            "faqs": []
-          },
-          "zomato_generic_no_icon": {
-            "name": "Generic feature (no icon)",
-            "login": false,
-            "description": "Tests fallback icon and behavior when icon/icon_link is missing.",
-            "disabled": false,
-            "healthy": true,
-            "coming_soon": false,
             "new": false,
-            "message": "Should show with the default info icon.",
+            "message": "",
             "faqs": [
               {
-                "question": "Why is there no icon?",
-                "answer": "This feature intentionally omits the icon to exercise UI defaults."
+                "question": "What will this feature do?",
+                "answer": "It will send you interactive notification to let you know the live status of the order."
               }
             ]
+          }
+        }
+      },
+      "swiggy": {
+        "name": "Swiggy",
+        "max_accounts": 1,
+        "healthy": true,
+        "message": "Swiggy support is in early development.",
+        "website_link": "https://swiggy.com",
+        "app_link": "https://play.google.com/store/apps/details?id=in.swiggy.android",
+        "color": "#FC8019",
+        "enabled": true,
+        "faqs": [
+          {
+            "question": "What is Swiggy integration?",
+            "answer": "Swiggy integration will bring delivery tracking and order notifications to Jomato, so you can monitor your Swiggy orders without opening the Swiggy app."
           },
-          "zomato_generic_login_false": {
-            "name": "Public feature (no login required)",
-            "login": false,
-            "description": "Tests a feature that does not require login.",
-            "icon": "assets/food_rescue.svg",
-            "disabled": false,
-            "healthy": true,
-            "coming_soon": false,
-            "new": false,
-            "message": "Public feature without login.",
-            "faqs": []
-          },
-          "zomato_generic_login_required_only": {
-            "name": "Login required only",
+          {
+            "question": "When will Swiggy features be available?",
+            "answer": "Swiggy support is experimental. We are researching their API. Live Notification is the first planned feature."
+          }
+        ],
+        "features": {
+          "swiggy_live_tracking": {
+            "name": "Live Delivery Tracking",
             "login_required": true,
-            "description": "Tests using only login_required without login.",
-            "icon_link": "assets/order_insights.svg",
+            "description": "Real-time notifications for your Swiggy food deliveries.",
             "disabled": false,
             "healthy": true,
-            "coming_soon": false,
+            "coming_soon": true,
             "new": false,
-            "message": "Requires login via login_required=true.",
-            "faqs": []
+            "message": "",
+            "faqs": [
+              {
+                "question": "What will this feature do?",
+                "answer": "Track your Swiggy order status and get notified when your rider is on the way and when they are arriving."
+              }
+            ]
           }
         }
       }
@@ -216,28 +239,32 @@
         "payload": {
           "content": [
             {
-              "question": "What data is collected?",
-              "answer": "We only collect the minimum needed to run the app. When you open the app, we record the equivalent of: \"Someone using Jomato version X opened the app today.\" That's an anonymous count (we don't know who you are). If you log in with Zomato, we store your Zomato session on your device only so you stay logged in; we don't collect your name, email, or phone beyond what Zomato needs for login."
+              "question": "What data does Jomato collect?",
+              "answer": "When you open the app, we record an anonymous event: 'Someone using Jomato version X opened the app.' We don't know who you are. If you log in with a service like Zomato, your session token is stored only on your device."
             },
             {
-              "question": "Why do you collect that data?",
-              "answer": "So we know how many people use Jomato and which app versions are in use. That helps us decide when to fix bugs and when to suggest updates. It's like knowing \"how many people opened the app today\" without knowing who they are."
+              "question": "Why do you collect that?",
+              "answer": "To know how many people use Jomato and which versions are active. This helps us prioritize bug fixes and decide when to push updates."
             },
             {
-              "question": "Is Jomato affiliated with Zomato?",
-              "answer": "No. Jomato is not affiliated with Zomato. Use at your own risk."
+              "question": "Is Jomato affiliated with Zomato, Swiggy, Blinkit, or Zepto?",
+              "answer": "No. Jomato is an independent, open-source project. It is not endorsed by or affiliated with any of these companies. Use at your own risk."
             },
             {
-              "question": "Do you use my location?",
-              "answer": "We don't use your phone's GPS. Food Rescue uses the area or city you've set in your Zomato account (your saved addresses). We don't track or store your precise location."
+              "question": "Does Jomato use my GPS location?",
+              "answer": "No. Features like Food Rescue use the delivery area saved in your Zomato account (your saved addresses), not your phone's GPS."
             },
             {
               "question": "Where does my data go?",
-              "answer": "The anonymous \"app opened\" info is used only to understand usage (e.g. how many people use which version). When you use features that need Zomato (like Food Rescue), those requests go to Zomato. Your Zomato login stays on your device; we don't store your password anywhere."
+              "answer": "Anonymous usage counts go to our analytics. When you use a feature that talks to Zomato or another service, those requests go directly to that service. We don't proxy or store your data on our servers."
             },
             {
-              "question": "Why do you need notification, battery, and install permissions?",
-              "answer": "Notifications: So we can notify you for Food Rescue. Battery: So the rescue feature can run in the background. Install: So you can install updates from the in-app update prompt if you choose to."
+              "question": "Why does Jomato need notification, battery, and install permissions?",
+              "answer": "Notifications: to alert you about Food Rescue orders and delivery updates. Battery: so background services like Food Rescue keep running. Install: so you can install app updates from the in-app prompt."
+            },
+            {
+              "question": "Can I delete my data?",
+              "answer": "Yes. Removing your account in the app deletes your session from the device. Uninstalling the app removes everything. We don't hold any data server-side tied to your identity."
             }
           ]
         }
@@ -255,3 +282,4 @@
       "request_feature_url": "https://github.com/jatin-dot-py/jomato-mobile/issues/new?title=%5BFeature%20Request%5D%20Short%20description%20here%20&body=Describe%20the%20feature."
     }
   }
+  
