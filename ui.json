@@ -2,6 +2,10 @@
     "integrity": {
       "versions": [
         {
+          "digest": "sha256:b42ad14b53ad1805fd5b5e0d4aed826fcf681db5643b50910e881bf4b758929f",
+          "version": "v1.0.6"
+        },
+        {
           "digest": "sha256:9c2716ccd03e0490b271cce9e2b3fb1cc19be2df240d029d0863a05f3df6b10b",
           "version": "v1.0.5"
         },
