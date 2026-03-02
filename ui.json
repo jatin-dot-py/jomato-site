@@ -82,9 +82,9 @@
             "login_required": true,
             "description": "See your total spending, order patterns, and top cuisines.",
             "icon_link": "assets/order_insights.svg",
-            "disabled": false,
+            "disabled": true,
             "healthy": true,
-            "coming_soon": false,
+            "coming_soon": true,
             "new": false,
             "message": "",
             "faqs": [
@@ -107,10 +107,10 @@
             "login_required": true,
             "description": "Real-time notifications for your active Zomato deliveries.",
             "icon_link": "assets/notifications.svg",
-            "disabled": false,
+            "disabled": true,
             "healthy": true,
-            "coming_soon": false,
-            "new": true,
+            "coming_soon": true,
+            "new": false,
             "message": "",
             "faqs": [
               {
